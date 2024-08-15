@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title >
+ Responsive Image Gallery 
+  </title>
+  <link rel="stylesheet" href="image.css">
+</head>
+<body>
+  <h1>Image Gallery</h1>
+  <div class="full" id="fullImgBox"><!--for getting the element by id in javascript-->
+    <img src="images/download.jpeg" id="fullImg" ><!--for getting the element by id in javascript-->
+    <span onclick="closeFullImg()">X</span>
+
+
+
+  </div>
+  <div class="image">
+    
+   <img src="images/download.jpeg" onclick="openFullImg(this.src)">
+   <img src="images/images (1).jpeg" onclick="openFullImg(this.src)">
+   <img src="images/images (10).jpeg" onclick="openFullImg(this.src)">
+   <img src="images/images (11).jpeg" onclick="openFullImg(this.src)">
+   <img src="images/images (12).jpeg" onclick="openFullImg(this.src)">
+   <img src="images/images (13).jpeg" onclick="openFullImg(this.src)">
+   <img src="images/images (14).jpeg" onclick="openFullImg(this.src)">
+   <img src="images/images (2).jpeg" onclick="openFullImg(this.src)">
+   <img src="images/images (3).jpeg" onclick="openFullImg(this.src)">
+   <img src="images/images (4).jpeg" onclick="openFullImg(this.src)">
+   <img src="images/images (5).jpeg" onclick="openFullImg(this.src)">
+   <img src="images/images (6).jpeg" onclick="openFullImg(this.src)">
+   <img src="images/images (7).jpeg" onclick="openFullImg(this.src)">
+   <img src="images/images (8).jpeg" onclick="openFullImg(this.src)">
+   <img src="images/images (9).jpeg" onclick="openFullImg(this.src)">
+   <img src="images/images.jpeg" onclick="openFullImg(this.src)">
+   <img src="images/images (15).jpeg" onclick="openFullImg(this.src)">
+   <img src="images/images (16).jpeg" onclick="openFullImg(this.src)">
+
+<!--Without 'this.src' the main picture is showing only if we click th pictures
+so now we are passing the images apth to the 'FullImg' by using 'this.src' so that when we 
+click each picture that picture is shown only ratehr than showing the whole main picture-->
+
+</div>
+<script>
+  {
+  var fullImgBox=document.getElementById("fullImgBox");
+  var fullImg=document.getElementById("fullImg");
+  function openFullImg(pic){
+    fullImgBox.style.display="flex"; /*display="none";*/
+    fullImg.src=pic;/*passing each picture's value to the fullImg by "pic"*/
+  }
+  function closeFullImg(){
+    fullImgBox.style.display="none";
+
+
+  }
+
+}
+</script>
+</body>
+ </html>
