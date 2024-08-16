@@ -1,0 +1,78 @@
+ <!DOCTYPE html>
+ <html>
+  <head>
+    <title>
+      Calculator
+    </title>
+    <link rel="stylesheet" href="calculator.css">
+
+  </head>
+  <body>
+  
+    <div class="calculator-container">
+      <h1>BASIC CALCULATOR</h1>
+    <table border="1">
+      <tr>
+        <td colspan="3"><input value="0" id="input" type="text"></td>
+        <td ><button onclick="clean()">C</button></td>
+      </tr>
+      <tr>
+        <td><button onclick="calc('1')">1</button></td>
+        <td><button onclick="calc('2')">2</button></td>
+        <td><button onclick="calc('3')">3</button></td>
+        <td><button onclick="calc('+')">+</button></td>
+      </tr>
+      <tr>
+        <td><button onclick="calc('4')">4</button></td>
+        <td><button onclick="calc('5')">5</button></td>
+        <td><button onclick="calc('6')">6</button></td>
+        <td><button onclick="calc('-')">-</button></td>
+      </tr>
+      <tr>
+        <td><button onclick="calc('7')">7</button></td>
+        <td><button onclick="calc('8')">8</button></td>
+        <td><button onclick="calc('9')">9</button></td>
+        <td><button onclick="calc('*')">*</button></td>
+      </tr>
+      <tr>
+        <td><button onclick="calc('0')">0</button></td>
+        <td><button onclick="calc('.')">.</button></td>
+        <td><button onclick="calc('/')">/</button></td>
+        <td><button onclick="solve()">=</button></td>
+       
+      </tr>
+    </table>
+  </div>
+
+  
+
+  </body>
+  <script>
+   function calc(x)
+   {
+    if(document.getElementById("input").value==0){
+      document.getElementById("input").value="";
+      document.getElementById("input").value=x;
+      
+ }
+    else{
+    
+document.getElementById("input").value+=x;
+    }
+   }
+   function clean(){
+    document.getElementById("input").value=0;
+   }
+   function solve()
+   {
+ 
+
+var x=document.getElementById("input").value;
+var y=eval(x);
+document.getElementById("input").value=y;
+
+   }
+
+
+  </script>
+ </html>
